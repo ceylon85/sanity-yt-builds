@@ -9,7 +9,7 @@ interface Props {
 }
 
 export default function Home({ posts }: Props) {
-  //console.log(posts)
+  //console.log(posts)// 서버 쪽 데이터
   return (
     <div className="mx-auto max-w-7xl" >
       <Head>
@@ -27,17 +27,17 @@ export default function Home({ posts }: Props) {
         <img className='hidden h-32 pr-10 md:inline-flex lg:h-full' src="https://accountabilitylab.org/wp-content/uploads/2020/03/Medium-logo.png" alt="M" />
       </div>
       {/* Posts */}
-      <div>
+      <div className='grid grid-cols-1 gap-3 p-2 sm:grid-cols-2 lg:grid-cols-3 md:gap-6 md:p-6'>
         {posts.map((post) => (
           <Link key={post._id} href={`/post/${post.slug.current}`}>
-            <div>
-              <img src={urlFor(post.mainImage).url()!} alt="image" />
-              <div>
+            <div className='overflow-hidden border rounded-lg cursor-pointer group'>
+              <img className='object-cover w-full transition-transform duration-200 ease-in-out h-60 group-hover:scale-105' src={urlFor(post.mainImage).url()!} alt="image" />
+              <div className='flex justify-between p-5 bg-white'>
                 <div>
-                  <p></p>
-                  <p></p>
-                  <p></p>
+                  <p className='text-lg font-bold'>{post.title}</p>
+                  <p className='text-xs'>{post.description} by {post.author.name}</p>
                 </div>
+                <img className='w-12 h-12 rounded-full' src={urlFor(post.author.image).url()!} alt="author" />
               </div>
             </div>
           </Link>
