@@ -13,6 +13,18 @@ function Post({ post }: Props) {
         <main>
             <Header />
             <img className='object-cover w-full h-40' src={urlFor(post.mainImage).url()!} alt="image" />
+
+            <article className='max-w-3xl p-5 mx-auto'>
+                <h1 className='mt-10 mb-3 text-3xl'>{post.title}</h1>
+                <h2 className='text-xl font-light text-gray-500'>{post.description}</h2>
+                <div>
+                    <img className='w-10 h-10 rounded-full' src={urlFor(post.author.image).url()!} alt="author" />
+                    <p className='text-sm font-extralight'>
+                        Blog post by {post.author.name} - Published at {" "}
+                        {new Date(post._createAt).toLocaleString()}
+                    </p>
+                </div>
+            </article>
         </main>
     )
 }
