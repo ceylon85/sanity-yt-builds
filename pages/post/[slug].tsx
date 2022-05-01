@@ -16,12 +16,12 @@ function Post({ post }: Props) {
 
             <article className='max-w-3xl p-5 mx-auto'>
                 <h1 className='mt-10 mb-3 text-3xl'>{post.title}</h1>
-                <h2 className='text-xl font-light text-gray-500'>{post.description}</h2>
-                <div>
+                <h2 className='mb-2 text-xl font-light text-gray-500'>{post.description}</h2>
+                <div className='flex items-center rounded-full'>
                     <img className='w-10 h-10 rounded-full' src={urlFor(post.author.image).url()!} alt="author" />
                     <p className='text-sm font-extralight'>
-                        Blog post by {post.author.name} - Published at {" "}
-                        {new Date(post._createAt).toLocaleString()}
+                        Blog post by {" "}
+                        <span className='text-green-600'>{post.author.name}</span> - Published at {new Date(post._createdAt).toLocaleString()}
                     </p>
                 </div>
             </article>
@@ -57,7 +57,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const query = `
     *[_type == "post" && slug.current == $slug][0]{
         _id,
-        _createAt,
+        _createdAt,
         title,
         author -> {
         name, 
