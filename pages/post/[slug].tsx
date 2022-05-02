@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next'
 import Header from '../../components/Header'
 import { sanityClient, urlFor } from '../../sanity'
 import { Post } from '../../typing'
-
+import PortableText from 'react-portable-text'
 interface Props {
     post: Post;
 }
@@ -23,6 +23,11 @@ function Post({ post }: Props) {
                         Blog post by {" "}
                         <span className='text-green-600'>{post.author.name}</span> - Published at {new Date(post._createdAt).toLocaleString()}
                     </p>
+                </div>
+                <div>
+                    <PortableText
+                        dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
+                        projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!} />
                 </div>
             </article>
         </main>
