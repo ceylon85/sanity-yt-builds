@@ -38,7 +38,7 @@ function Post({ post }: Props) {
                                 h2: (props: any) => (
                                     <h1 className='my-5 text-xl font-bold'{...props} />
                                 ),
-                                li: ({children}: any) => (
+                                li: ({ children }: any) => (
                                     <li className='ml-4 list-disc'>{children}</li>
                                 ),
                                 link: ({ href, children }: any) => (
@@ -51,6 +51,25 @@ function Post({ post }: Props) {
                     />
                 </div>
             </article>
+            <hr className='max-w-lg mx-auto my-5 border border-yellow-500' />
+            <form className='flex flex-col max-w-2xl p-5 mx-auto mb-10'>
+                <h3 className='text-sm text-yellow-500'>Enjoyed the this Article?</h3>
+                <h4 className='text-3xl font-bold'>Leave a comment below!</h4>
+                <hr className='py-3 mt-2' />
+                <label className='block mb-5'>
+                    <span className='text-gray-700'>Name</span>
+                    <input className='block w-full px-3 py-2 mt-1 border rounded shadow outline-none ring-yellow-500 focus:ring' placeholder='John Doe' type="text" />
+                </label>
+                <label className='block mb-5'>
+                    <span className='text-gray-700'>Email</span>
+                    <input className='block w-full px-3 py-2 mt-1 border rounded shadow outline-none ring-yellow-500 focus:ring' placeholder='abc@email.com' type="email" />
+                </label>
+                <label className='block mb-5'>
+                    <span className='text-gray-700'>Comment</span>
+                    <textarea className='block w-full px-3 py-2 mt-1 border rounded shadow outline-none ring-yellow-500 focus:ring' placeholder='내용을 써주세욥' rows={8} />
+                </label>
+            </form>
+
         </main>
     )
 }
