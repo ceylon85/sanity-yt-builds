@@ -25,7 +25,7 @@ function Post({ post }: Props) {
 
     const onSubmit: SubmitHandler<IFormInput> = async (data) => {
         //console.log(data); comment data 확인됨
-        await fetch("/api/createComment", {
+        await fetch("/api/createComment", { // 내 api로 코멘트 데이터 가져오기 
             method: "POST",
             body: JSON.stringify(data),
         }).then(() => {
