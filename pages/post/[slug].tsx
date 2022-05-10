@@ -17,7 +17,7 @@ interface Props {
 }
 
 function Post({ post }: Props) {
-    //console.log(post); post data 확인됨
+    console.log(post); //post data 확인됨
 
     const [submitted, setSubmitted] = useState(false)
 
