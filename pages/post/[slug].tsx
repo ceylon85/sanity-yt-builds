@@ -137,7 +137,7 @@ function Post({ post }: Props) {
                     <input className='px-4 py-2 font-bold text-white bg-yellow-500 rounded shadow cursor-pointer hover:bg-yellow-400 focus:outline-none' type="submit" />
                 </form>
             )}
-
+{/* Comments */}
 
         </main>
     )
