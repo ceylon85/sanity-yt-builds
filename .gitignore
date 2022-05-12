@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+sanityytbuilds/node_modules
+
 # testing
 /coverage
 
@@ -35,3 +37,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
