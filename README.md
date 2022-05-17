@@ -12,7 +12,6 @@ Sanity [Studio](https://sanitybuilds.sanity.studio/desk)
 - Post 작성 
 - Authur 설정  
 - Comment 수락 
-  
 # `Main Dir Structure`
 - `components`   
     - Header: header 구성
