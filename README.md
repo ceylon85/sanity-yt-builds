@@ -13,23 +13,6 @@ Sanity [Studio](https://sanitybuilds.sanity.studio/desk)
 - Authur 설정  
 - Comment 수락 
 # `Main Dir Structure`
-
-- `components`   
-    - Header: header 구성
-- `pages`
-    - `api`: My Backend Data
-         - createComment.ts  
-    - `post`: Blog(site)에서 볼 수 있는 Post 
-         - [slug].tsx
-    - index.tsx: Home 구성   
-- `sanityytbuilds`:Sanity studio 
-    - `schemas`
-         - post.js: post 구성 스키마
-         - comment.js: comment 구성 스키마
-         - authur.js: auhtur 구성 스키마
-         - schemas.js: 스키마 설정   
-- typing.d.ts: type 정의 파일
-- sanity.js: sanity login
 ```bash 
 ├── components
 │   └── Header.tsx: header 구성
