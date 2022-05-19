@@ -9,9 +9,9 @@ Link to [View](https://sanity-builds.vercel.app/)
 Sanity [Studio](https://sanitybuilds.sanity.studio/desk)
 #### Sanity Studio 기능
 - studio login(google, github quick login) 
-- Post 작성 
+- Post 작성 및 관리
 - Authur 설정  
-- Comment 수락 
+- Comment 수락 및 관리
 # `Main Dir Structure`
 ```bash 
 ├── components
@@ -37,3 +37,9 @@ Sanity [Studio](https://sanitybuilds.sanity.studio/desk)
 └── sanity.js: sanity login
 ``` 
 ---
+## `Main Feature`
+
+- localhost 로 연결한 sanity studio와 배포한 sanity studio 서로 간의 연동   
+  
+![local_studio](https://user-images.githubusercontent.com/45006553/168986775-98e4d47a-6026-4cb3-9cbe-30868cca77d6.gif)
+
