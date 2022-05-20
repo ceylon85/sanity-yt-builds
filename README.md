@@ -38,6 +38,10 @@ Sanity [Studio](https://sanitybuilds.sanity.studio/desk)
 ``` 
 ---
 ## `Main Feature`
+- studio에서 post 작성하면 바로 배포한 사이트에 post 등록됨 
+포스트 작성화면
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/45006553/169481049-94eba08f-e63b-4201-80c8-bf414f2b4665.gif)
+
 
 - localhost 로 연결한 sanity studio와 배포한 sanity studio 서로 간의 연동   
   
