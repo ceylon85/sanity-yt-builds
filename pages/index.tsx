@@ -28,14 +28,14 @@ export default function Home({ posts }: Props) {
       </div>
       {/* Posts */}
       <div className='grid grid-cols-1 gap-3 p-2 sm:grid-cols-2 lg:grid-cols-3 md:gap-6 md:p-6'>
-        {posts.map((post) => (
+        {posts.sort((a, b) => (a._createdAt > b._createdAt) ? -1 : ((b._createdAt > a._createdAt) ? 1 : 0)).map((post) => (
           <Link key={post._id} href={`/post/${post.slug.current}`}>
             <div className='overflow-hidden border rounded-lg cursor-pointer group'>
               <img className='object-cover w-full transition-transform duration-200 ease-in-out h-60 group-hover:scale-105' src={urlFor(post.mainImage).url()!} alt="image" />
               <div className='flex justify-between p-5 bg-white'>
                 <div>
                   <p className='text-lg font-bold'>{post.title}</p>
-                  <p className='text-xs'>{post.description} by {post.author.name}</p>
+                  <p className='text-xs'>{post.description} By {post.author.name}</p>
                 </div>
                 <img className='w-12 h-12 rounded-full' src={urlFor(post.author.image).url()!} alt="author" />
               </div>
@@ -53,9 +53,10 @@ export const getServerSideProps = async () => {
   const query = `*[_type == "post"]{
     _id,
     title,
+    _createdAt,
     author -> {
     name, 
-    image
+    image, 
   }, 
     description,
     mainImage,
