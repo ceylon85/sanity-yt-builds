@@ -39,11 +39,16 @@ Sanity [Studio](https://sanitybuilds.sanity.studio/desk)
 ---
 ## `Main Feature`
 - studio에서 post 작성하면 바로 배포한 사이트에 post 등록됨 
-포스트 작성화면
+- 포스트 작성화면
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/45006553/169481049-94eba08f-e63b-4201-80c8-bf414f2b4665.gif)
 
 
-- localhost 로 연결한 sanity studio와 배포한 sanity studio 서로 간의 연동   
-  
+- 등록된 post
+![posting](https://user-images.githubusercontent.com/45006553/170223607-e926bbb3-fde7-4457-87f3-7a6c8d8d90ab.gif)
+
+- comment 
+---
+### localhost 와 sanity studio 실시간 연동
+- localhost 로 연결한 sanity studio와 배포한 sanity studio 서로 간의 연동     
 ![local_studio](https://user-images.githubusercontent.com/45006553/168986775-98e4d47a-6026-4cb3-9cbe-30868cca77d6.gif)
 
